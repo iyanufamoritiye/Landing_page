@@ -63,6 +63,9 @@ const Footer = () => {
     list-style-type: none;
     flex-direction: column;
     gap: 30px;
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
   `;
   const Ulsocial = styled.ul`
     display: flex;

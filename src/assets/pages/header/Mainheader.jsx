@@ -91,8 +91,8 @@ const Mainheader = () => {
     letter-spacing: 3px;
     @media (max-width: 768px) {
       justify-self: start;
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 10px;
+      font-weight: 300;
       letter-spacing: 0;
     }
   `;
