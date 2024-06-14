@@ -53,6 +53,7 @@ const Main = () => {
 
   const Buttonv = styled.button`
     position: absolute;
+    color: black;
     display: none;
     z-index: 1;
     font-size: 10px;
@@ -90,6 +91,7 @@ const Main = () => {
   `;
   const ButtonR = styled.button`
     font-size: 10px;
+    color: black;
     font-weight: 400;
     display: block;
     padding-top: 15px;
@@ -115,6 +117,7 @@ const Main = () => {
 
   const Buttonarrow = styled.button`
     border: none;
+    color: black;
     padding: 0.6em 1.2em;
     font-size: 1.8;
     font-weight: 400;
