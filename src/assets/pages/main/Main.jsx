@@ -43,7 +43,6 @@ const Main = () => {
     height: 600px;
     object-fit: cover;
     @media (max-width: 768px) {
-      height: 400;
       margin-top: 20px;
     }
   `;

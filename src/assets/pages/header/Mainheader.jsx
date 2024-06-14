@@ -50,7 +50,7 @@ const Mainheader = () => {
     font-weight: bold;
     padding-top: 10px;
     @media (max-width: 768px) {
-      width: 80px;
+      width: 40px;
       max-height: 40px;
     }
   `;

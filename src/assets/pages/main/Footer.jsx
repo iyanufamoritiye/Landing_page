@@ -119,7 +119,7 @@ const Footer = () => {
 
     margin-top: 30px;
     justify-content: center;
-    margin-bottom: 50px;
+
     border-top: 0.5px solid #868e96;
     padding-top: 20px;
     padding-bottom: 20px;
