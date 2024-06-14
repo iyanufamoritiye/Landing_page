@@ -93,6 +93,7 @@ const Mainheader = () => {
       justify-self: start;
       font-size: 12px;
       font-weight: 400;
+      letter-spacing: 0;
     }
   `;
   const MenuIcon = styled.div`
