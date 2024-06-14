@@ -1,42 +1,58 @@
+import { useState } from "react";
 import React from "react";
 import logohead from "../../logohead.png";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-const Mainheader = () => {
-  const Header = styled.header`
-    display: flex;
-    justify-content: space-between;
-
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    align-items: center;
-    position: fixed;
-    top: 0;
+import { FaTimes, FaBars } from "react-icons/fa";
+// const Mainheader = () => {
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
   background-color: hwb(0 100% 0% / 0.945);
-     
-    width: 100%;
-   z-index:10000;
-M
-    
-  `;
+  max-width: center;
+  width: 100%;
+  z-index: 10000;
+  @media (max-width: 768px) {
+    padding: 0 1.5rem 0 0;
+  }
+`;
 
-  const Nav = styled.nav`
-    width: 60%;
-    align-items: center;
+const Nav = styled.nav`
+  width: 60%;
+  align-items: center;
+  @media (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    flex-direction:row;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #282c34;
+   
+    padding: 20px;
+    //  justify-content: end;
+       width: 30%;
+`;
+const Mainheader = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-    @media (max-width: 768px) {
-    display: none;
-
-  `;
   const Img = styled.img`
     max-height: 45px;
     width: 100px;
 
     font-weight: bold;
     padding-top: 10px;
+    @media (max-width: 768px) {
+      width: 80px;
+      max-height: 40px;
+    }
   `;
   const Ul = styled.ul`
     display: flex;
@@ -48,11 +64,22 @@ M
       padding-left: 5px;
       padding-right: 5px;
     }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 12px;
+      // justify-content: flex-end;
+      align-items: start;
+    }
   `;
 
   const LiMain = styled.li`
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+
+    @media (max-width: 768px) {
+      text-align: start;
+      padding: 0;
+    }
   `;
 
   const NavLink = styled(Link)`
@@ -62,15 +89,30 @@ M
     text-decoration: none;
     font-family: roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
     letter-spacing: 3px;
+    @media (max-width: 768px) {
+      justify-self: start;
+      font-size: 12px;
+      font-weight: 400;
+    }
   `;
+  const MenuIcon = styled.div`
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
 
+    @media (max-width: 768px) {
+      display: block;
+    }
+  `;
   return (
     <Header>
       <div>
         <Img src={logohead} alt="logo" />
       </div>
-
-      <Nav>
+      <MenuIcon onClick={toggleMenu}>
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </MenuIcon>
+      <Nav isOpen={isOpen}>
         <Ul>
           <LiMain>
             <NavLink to="/">MAIN</NavLink>

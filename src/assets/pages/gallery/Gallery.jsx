@@ -20,6 +20,9 @@ const Gallery = () => {
     padding: 0 4.2rem;
     margin: 0 auto;
     font-family: "roboto", sans-serif;
+    @media (max-width: 768px) {
+      padding: 0 0.5rem;
+    }
   `;
   const Buttonarrow = styled.button`
     border: none;
@@ -76,6 +79,9 @@ const Gallery = () => {
         z-index: 1;
         position: relative;
       }
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
     }
   `;
   const Divarrow = styled.div`

@@ -21,23 +21,31 @@ const Main = () => {
     padding: 0 4.2rem;
     margin: 0 auto;
     font-family: "roboto", sans-serif;
+    @media (max-width: 768px) {
+      padding: 0 0.5rem;
+    }
   `;
 
-  const homeStyle = {
-    display: "flex",
-    justifyContent: "space-between",
+  const SectionHome = styled.div`
+    display: flex;
+    justify-content: space-between;
 
-    // height: "100vh",
-    // width: "100vw",
+    overflow: hidden;
+    padding: 0;
+    margin: 100px 0 0 0;
 
-    overflow: "hidden",
-    padding: "0 0 0 0",
-    margin: "100px 0 0 0",
-  };
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  `;
   const Img = styled.img`
     width: 680px;
     height: 600px;
     object-fit: cover;
+    @media (max-width: 768px) {
+      height: 400;
+      margin-top: 20px;
+    }
   `;
   const DivImg = styled.div`
     position: relative;
@@ -68,6 +76,17 @@ const Main = () => {
       box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
       padding-top: 14px;
       padding-bottom: 14px;
+    }
+    @media (max-width: 768px) {
+      top: 582px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      &: hover {
+        padding-top: 11px;
+        padding-bottom: 11px;
+        border: 2px solid #495057;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+      }
     }
   `;
   const ButtonR = styled.button`
@@ -120,6 +139,10 @@ const Main = () => {
     width: 120px;
     align-items: left;
     margin-top: 70px;
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      width: 100px;
+    }
   `;
   const Divtext = styled.div`
     display: inline-block;
@@ -135,6 +158,11 @@ const Main = () => {
     margin-bottom: 30px;
     font-family: roboto, sans-serif;
     line-height: 0.5;
+    @media (max-width: 768px) {
+      margin-top: 60px;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
   `;
 
   const H1l = styled.h1`
@@ -145,6 +173,10 @@ const Main = () => {
     text-align: left;
 
     margin-bottom: 80px;
+    @media (max-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
   `;
 
   // about section
@@ -156,12 +188,15 @@ const Main = () => {
     margin-top: 70px;
     margin-bottom: 30px;
     padding-top: 20px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   `;
   const Divreadimg = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-   
+
     align-items: center;
     width: 60%;
     :nth-child(1) {
@@ -172,6 +207,25 @@ const Main = () => {
       height: 120%;
       width: 270px;
       margin-top: 30px;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      :nth-child(1) {
+        width: 100%;
+        height: 214px;
+      }
+      :nth-child(2) {
+        width: 100%;
+        height: 214px;
+      }
+      :nth-child(3) {
+        width: 100%;
+        height: 100%;
+        margin-top: 0 !important;
+      }
+    }
   `;
   const Img2 = styled.img`
     grid-column: 2/3;
@@ -182,8 +236,13 @@ const Main = () => {
     font-weight: 300;
     font-style: roboto, sans-serif;
     color: #bdbdbd;
-    // margin-top: 20px;
+
     margin-bottom: 40px;
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
   `;
 
   const Plorem = styled.p`
@@ -191,11 +250,17 @@ const Main = () => {
     font-weight: 400;
     line-height: 1.6;
     color: #000000;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   `;
 
   const Divreadtext = styled.div`
     display: inline-block;
     padding-right: 20px;
+    @media (max-width: 768px) {
+      padding: 0 0.5rem;
+    }
   `;
   //mision statements
   const SectionMission = styled.section`
@@ -208,6 +273,9 @@ const Main = () => {
     color: #bdbdbd;
     margin-top: 100px;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   `;
 
   const Divspancontainer = styled.div`
@@ -216,6 +284,11 @@ const Main = () => {
     gap: 300px;
     margin-top: 0;
     margin-bottom: 0;
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      gap: 10px;
+    }
   `;
   const Divnumtext = styled.div`
     display: flex;
@@ -223,6 +296,9 @@ const Main = () => {
     gap: 40px;
     margin-bottom: 40px;
     margin-top: 20px;
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
   `;
   const SpanNum = styled.span`
     display: block;
@@ -232,6 +308,10 @@ const Main = () => {
     text-align: center;
     line-height: 1;
     color: #f2f2f2;
+    @media (max-width: 768px) {
+      font-size: 64px;
+      font-weight: 900;
+    }
   `;
   const Plorem2 = styled.span`
     font-size: 16px;
@@ -239,6 +319,12 @@ const Main = () => {
     line-height: 1.6;
     color: #000000;
     margin-top: 20px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-top: 0;
+    }
   `;
   //project section
   const SectionPorject = styled.section`
@@ -293,16 +379,15 @@ const Main = () => {
       background-color: #dee2e6;
       color: #212529;
     }
-  `;
-  const H2reading2 = styled.h2`
-    text-align: start;
-    font-size: 48px;
-    font-family: roboto, sans-serif;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 100px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
+
+    @media (max-width: 768px) {
+      font-size: 8px;
+      font-weight: 400;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 20px;
+      padding-left: 10px;
+    }
   `;
 
   const DivProjectimg = styled.div`
@@ -320,85 +405,132 @@ const Main = () => {
     :nth-child(2) {
       width: 50%;
     }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      :nth-child(1) {
+        width: 100%;
+      }
+
+      :nth-child(2) {
+        width: 100%;
+      }
+    }
   `;
 
   const DivProjectimg2 = styled.div`
     display: flex;
-     
-   overflow: hidden;
-    flex-direction: row;
+    justify-content: center;
     margin-top: 20px;
-    gap: 20px;'
-     
-:nth-child(1) {
-       width:30%;
+    gap: 20px;
+    overflow: hidden;
+
+    :nth-child(1) {
+      width: 30%;
     }
     :nth-child(2) {
       width: 50%;
     }
-    
+
     :nth-child(3) {
-       width: 30%;
+      width: 30%;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      :nth-child(1) {
+        width: 100%;
+        height: 167px;
+      }
+
+      :nth-child(2) {
+        width: 100%;
+        height: 167px;
+      }
+      :nth-child(3) {
+        width: 100%;
+        height: 167px;
+      }
     }
   `;
   const DivImgButton = styled.div`
     position: absolute;
     left: 60px;
     top: 15px;
+    @media (max-width: 768px) {
+      left: 55px;
+      top: -13px;
+    }
+  `;
+  const H2reading2 = styled.h2`
+    text-align: start;
+    font-size: 48px;
+    font-family: roboto, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   `;
 
   //section form
   const DivInput = styled.div`
     display: flex;
     gap: 2em;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   `;
   const FormInput = styled.form`
     display: flex;
 
     flex-direction: column;
     gap: 10px;
-    margin-top:10px;
+    margin-top: 10px;
     font-size: 48px;
     font-weight: 400;
     width: 50%;
-    
 
     :nth-child(1) {
       padding: 10px;
       width: 100%;
-       background-color:#F3F3F3;
-       border:none;
-       height: 100%;
+      background-color: #f3f3f3;
+      border: none;
+      height: 100%;
     }
     :nth-child(2) {
       padding: 10px;
       width: 100%;
-       background-color:#F3F3F3;
-       border:none;
-       height: 100%;
+      background-color: #f3f3f3;
+      border: none;
+      height: 100%;
     }
     :nth-child(3) {
       padding: 10px;
       width: 100%;
-       background-color:#F3F3F3;
-       border:none;
-       height: 100%;
+      background-color: #f3f3f3;
+      border: none;
+      height: 100%;
     }
     :nth-child(4) {
       padding: 10px;
       width: 100%;
-       background-color:#F3F3F3;
-       border:none;
-       height: 100%;
+      background-color: #f3f3f3;
+      border: none;
+      height: 100%;
     }
     :nth-child(5) {
       padding: 10px;
       width: 100%;
       padding-bottom: 140px;
-       background-color:#F3F3F3;
-       border:none;
-       height: 100%;
- 
+      background-color: #f3f3f3;
+      border: none;
+      height: 100%;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   `;
   const ButtonP3 = styled.button`
     font-size: 10px;
@@ -427,12 +559,15 @@ const Main = () => {
   const ImgContact = styled.img`
     width: 60%;
     justify-self: end;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   `;
 
   return (
     <Container>
       <Mainheader />
-      <section style={homeStyle}>
+      <SectionHome>
         <div>
           <Divtext>
             <H1p>Project</H1p>
@@ -450,7 +585,7 @@ const Main = () => {
           <Img src={homeimage} alt="project image" />
           <Buttonv>VIEW PROJECT →</Buttonv>
         </DivImg>
-      </section>
+      </SectionHome>
       <Sectionabout>
         <Divreadimg>
           <img src={ReadMore1} alt="readmore img " />

@@ -17,6 +17,9 @@ const Footer = () => {
   const Sectionfooter = styled.section`
     background-color: black;
     margin: 0 !important;
+    @media (max-width: 768px) {
+      padding: 0 0.5rem;
+    }
   `;
 
   const Divfooter = styled.div`
@@ -28,11 +31,18 @@ const Footer = () => {
     padding: 10px 0;
     background-color: black;
     font-family: roboto, sans-serif;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   `;
 
   const Img = styled.img`
     max-height: 300px;
     width: 250px;
+    @media (max-width: 768px) {
+      max-height: 250px;
+      width: 100px;
+    }
   `;
   const NavLink = styled(Link)`
     color: #ffffff;
@@ -43,6 +53,10 @@ const Footer = () => {
 
     text-decoration: none;
     font-family: inherit;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      font-weight: 400;
+    }
   `;
   const Ul = styled.ul`
     display: flex;
@@ -64,6 +78,11 @@ const Footer = () => {
     color: #fff;
     font-family: inherit;
     margin-bottom: 30px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
   `;
   const DivContain = styled.div`
     margin-top: 50px;
@@ -75,6 +94,10 @@ const Footer = () => {
     font-family: inherit;
 
     line-height: 1.6;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      c
+    }
   `;
   const ListSocials = styled.li`
     font-size: 16px;
@@ -83,6 +106,9 @@ const Footer = () => {
     font-family: inherit;
     letter-spacing: 3px;
     line-height: 1.6;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   `;
   const Alink = styled.a`
     color: #ffffff;
