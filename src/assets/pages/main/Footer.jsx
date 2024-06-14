@@ -126,6 +126,9 @@ const Footer = () => {
     border-top: 0.5px solid #868e96;
     padding-top: 20px;
     padding-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   `;
 
   return (
