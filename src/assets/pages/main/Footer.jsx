@@ -18,7 +18,7 @@ const Footer = () => {
     background-color: black;
     margin: 0 !important;
     @media (max-width: 768px) {
-      padding: 0 0.5rem;
+      padding: 0 1.4rem;
     }
   `;
 
