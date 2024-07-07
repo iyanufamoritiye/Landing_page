@@ -15,7 +15,7 @@ body {
   font-family: "roboto", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+
   /* THIS ONLY HAPPEN WHEN NOTHING IS ABSOLUTELY
   POSITIONED IN THE BODY */
   overflow-x: hidden;

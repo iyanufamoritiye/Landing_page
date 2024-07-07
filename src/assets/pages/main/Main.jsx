@@ -24,6 +24,9 @@ const Main = () => {
     @media (max-width: 768px) {
       padding: 0 0.5rem;
     }
+    @media (max-width: 1024px) {
+      padding: 0 2rem;
+    }
   `;
 
   const SectionHome = styled.div`
@@ -106,6 +109,9 @@ const Main = () => {
     &:hover {
       border: none;
       background-color: #dee2e6;
+    }
+    @media (max-width: 1026px) {
+      margin-top: 16px;
     }
   `;
 
@@ -193,6 +199,8 @@ const Main = () => {
     @media (max-width: 768px) {
       flex-direction: column;
     }
+    @media (max-width: 1026px) {
+    }
   `;
   const Divreadimg = styled.div`
     display: grid;
@@ -228,6 +236,23 @@ const Main = () => {
         margin-top: 0 !important;
       }
     }
+
+    @media (max-width: 1026px) {
+      width: 70%;
+      :nth-child(1) {
+        width: 90%;
+        height: 200px;
+      }
+      :nth-child(2) {
+        width: 90%;
+        height: 400px;
+      }
+      :nth-child(3) {
+        width: 90%;
+        height: 200px;
+        margin-top: 0 !important;
+      }
+    }
   `;
   const Img2 = styled.img`
     grid-column: 2/3;
@@ -245,6 +270,11 @@ const Main = () => {
       font-size: 32px;
       margin-bottom: 20px;
     }
+    @media (max-width: 1026px) {
+      margin-top: 30px;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
   `;
 
   const Plorem = styled.p`
@@ -254,6 +284,11 @@ const Main = () => {
     color: #000000;
     @media (max-width: 768px) {
       font-size: 14px;
+      line-height: 1.2;
+    }
+    @media (max-width: 1026px) {
+      font-size: 14px;
+      line-height: 1.2;
     }
   `;
 
@@ -291,6 +326,9 @@ const Main = () => {
 
       gap: 10px;
     }
+    @media (max-width: 10268px) {
+      gap: 60px;
+    }
   `;
   const Divnumtext = styled.div`
     display: flex;
@@ -301,11 +339,14 @@ const Main = () => {
     @media (max-width: 768px) {
       justify-content: flex-start;
     }
+    @media (max-width: 1026px) {
+      gap: 12px;
+    }
   `;
   const SpanNum = styled.span`
     display: block;
     padding-top: 0;
-    font-size: 130px;
+    font-size: 110px;
     font-weight: 900;
     text-align: center;
     line-height: 1;
@@ -322,6 +363,12 @@ const Main = () => {
     color: #000000;
     margin-top: 20px;
     @media (max-width: 768px) {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-top: 0;
+    }
+    @media (max-width: 1026px) {
       font-size: 14px;
       font-weight: 300;
       line-height: 1.4;
@@ -389,6 +436,14 @@ const Main = () => {
       padding-bottom: 10px;
       padding-right: 20px;
       padding-left: 10px;
+    }
+    @media (max-width: 1026px) {
+      font-size: 8px;
+      font-weight: 400;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-right: 24px;
+      padding-left: 12px;
     }
   `;
 
@@ -461,6 +516,10 @@ const Main = () => {
       left: 55px;
       top: -13px;
     }
+    @media (max-width: 1026px) {
+      left: 50px;
+      top: -13px;
+    }
   `;
   const H2reading2 = styled.h2`
     text-align: start;
@@ -472,6 +531,9 @@ const Main = () => {
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
     @media (max-width: 768px) {
+      font-size: 32px;
+    }
+    @media (max-width: 1026px) {
       font-size: 32px;
     }
   `;
@@ -567,114 +629,116 @@ const Main = () => {
   `;
 
   return (
-    <Container>
-      <Mainheader />
-      <SectionHome>
-        <div>
-          <Divtext>
-            <H1p>Project</H1p>
-            <H1l>Lorum</H1l>
-          </Divtext>
-          <Divarrow>
-            <Buttonarrow>←</Buttonarrow>
-            <Buttonarrow>→</Buttonarrow>
-          </Divarrow>
+    <div>
+      <Container>
+        <Mainheader />
+        <SectionHome>
           <div>
-            <ImgSide src={sidenum} alt="side numbers" />
+            <Divtext>
+              <H1p>Project</H1p>
+              <H1l>Lorum</H1l>
+            </Divtext>
+            <Divarrow>
+              <Buttonarrow>←</Buttonarrow>
+              <Buttonarrow>→</Buttonarrow>
+            </Divarrow>
+            <div>
+              <ImgSide src={sidenum} alt="side numbers" />
+            </div>
           </div>
-        </div>
-        <DivImg>
-          <Img src={homeimage} alt="project image" />
-          <Buttonv>VIEW PROJECT →</Buttonv>
-        </DivImg>
-      </SectionHome>
-      <Sectionabout>
-        <Divreadimg>
-          <img src={ReadMore1} alt="readmore img " />
-          <Img2 src={ReadMore2} alt="readmore img" />
-          <img src={ReadMore3} alt="readmore img" />
-        </Divreadimg>
-        <Divreadtext>
-          <H2about>About</H2about>
-          <Plorem>
-            Lorem Ipsum is simply dummy text of the printing and <br />
-            typesetting industry. Lorem Ipsum has been the
-            <br /> industry's standard dummy text ever since the 1500s,
-            <br /> when an unknown printer took a galley of type and
-            <br /> scrambled it to make a type specimen book. It has <br />
-            survived not only five centuries, but also the leap into <br />
-            electronic typesetting, remaining essentially unchanged.
-          </Plorem>
-          <ButtonR>READ MORE → </ButtonR>
-        </Divreadtext>
-      </Sectionabout>
-      <SectionMission>
-        <H2heading>Main Focus/Mission Statement</H2heading>
-        <Divspancontainer>
-          <Divnumtext>
-            <SpanNum>1</SpanNum>
-            <Plorem2>
-              Lorem ipsum dolor sit amet,
-              <br /> consectetur adipiscing elit.
-              <br /> Sed efficitur, lectus et
-              <br /> facilisis placerat.
-            </Plorem2>
-          </Divnumtext>
-          <Divnumtext>
-            <SpanNum>2</SpanNum>
-            <Plorem2>
-              Lorem ipsum dolor sit amet, consectetur
-              <br /> adipiscing elit. Sed efficitur, lectus et <br />
-              facilisis placerat, magna mauris porttitor <br />
-              tortor, a auctor est felis ut nisl.
-            </Plorem2>
-          </Divnumtext>
-        </Divspancontainer>
-      </SectionMission>
-      <SectionPorject>
-        <H2heading>Our Project</H2heading>
-        <DivProjectimg>
-          <img src={projectimg1} alt="projectimg" />
+          <DivImg>
+            <Img src={homeimage} alt="project image" />
+            <Buttonv>VIEW PROJECT →</Buttonv>
+          </DivImg>
+        </SectionHome>
+        <Sectionabout>
+          <Divreadimg>
+            <img src={ReadMore1} alt="readmore img " />
+            <Img2 src={ReadMore2} alt="readmore img" />
+            <img src={ReadMore3} alt="readmore img" />
+          </Divreadimg>
+          <Divreadtext>
+            <H2about>About</H2about>
+            <Plorem>
+              Lorem Ipsum is simply dummy text of the printing and <br />
+              typesetting industry. Lorem Ipsum has been the
+              <br /> industry's standard dummy text ever since the 1500s,
+              <br /> when an unknown printer took a galley of type and
+              <br /> scrambled it to make a type specimen book. It has <br />
+              survived not only five centuries, but also the leap into <br />
+              electronic typesetting, remaining essentially unchanged.
+            </Plorem>
+            <ButtonR>READ MORE → </ButtonR>
+          </Divreadtext>
+        </Sectionabout>
+        <SectionMission>
+          <H2heading>Main Focus/Mission Statement</H2heading>
+          <Divspancontainer>
+            <Divnumtext>
+              <SpanNum>1</SpanNum>
+              <Plorem2>
+                Lorem ipsum dolor sit amet,
+                <br /> consectetur adipiscing elit.
+                <br /> Sed efficitur, lectus et
+                <br /> facilisis placerat.
+              </Plorem2>
+            </Divnumtext>
+            <Divnumtext>
+              <SpanNum>2</SpanNum>
+              <Plorem2>
+                Lorem ipsum dolor sit amet, consectetur
+                <br /> adipiscing elit. Sed efficitur, lectus et <br />
+                facilisis placerat, magna mauris porttitor <br />
+                tortor, a auctor est felis ut nisl.
+              </Plorem2>
+            </Divnumtext>
+          </Divspancontainer>
+        </SectionMission>
+        <SectionPorject>
+          <H2heading>Our Project</H2heading>
+          <DivProjectimg>
+            <img src={projectimg1} alt="projectimg" />
 
-          <img src={projectimg2} alt="projectimg" />
-        </DivProjectimg>
-        <DivProjectimg2>
-          <img src={projectimg3} alt="projectimg" />
-          <img src={projectimg4} alt="projectimg" />
-          <img src={projectimg5} alt="projectimg" />
-        </DivProjectimg2>
-        <ButtonP>ALL PROJECTS →</ButtonP>
-        <DivImgButton>
-          <H2reading2>
-            Sample <br />
-            Project
-          </H2reading2>
-          <ButtonP2>VIEW MORE →</ButtonP2>
-        </DivImgButton>
-      </SectionPorject>
+            <img src={projectimg2} alt="projectimg" />
+          </DivProjectimg>
+          <DivProjectimg2>
+            <img src={projectimg3} alt="projectimg" />
+            <img src={projectimg4} alt="projectimg" />
+            <img src={projectimg5} alt="projectimg" />
+          </DivProjectimg2>
+          <ButtonP>ALL PROJECTS →</ButtonP>
+          <DivImgButton>
+            <H2reading2>
+              Sample <br />
+              Project
+            </H2reading2>
+            <ButtonP2>VIEW MORE →</ButtonP2>
+          </DivImgButton>
+        </SectionPorject>
 
-      <section>
-        <H2heading>Contact Us</H2heading>
-        <DivInput>
-          <FormInput>
-            <input type="name" placeholder="Name*" required />
-            <input
-              type="tel"
-              placeholder="Phone Number*"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              required
-            />
-            <input type="email" placeholder="Email*" required />
-            <input type="text" placeholder="Interested In" />
-            <input type="text" placeholder="Message*" required />
-          </FormInput>
+        <section>
+          <H2heading>Contact Us</H2heading>
+          <DivInput>
+            <FormInput>
+              <input type="name" placeholder="Name*" required />
+              <input
+                type="tel"
+                placeholder="Phone Number*"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+              <input type="email" placeholder="Email*" required />
+              <input type="text" placeholder="Interested In" />
+              <input type="text" placeholder="Message*" required />
+            </FormInput>
 
-          <ImgContact src={contactUsImg} alt="img contact" />
-        </DivInput>
-        <ButtonP3>SEND EMAIL→</ButtonP3>
-      </section>
+            <ImgContact src={contactUsImg} alt="img contact" />
+          </DivInput>
+          <ButtonP3>SEND EMAIL→</ButtonP3>
+        </section>
+      </Container>
       <Footer />
-    </Container>
+    </div>
   );
 };
 

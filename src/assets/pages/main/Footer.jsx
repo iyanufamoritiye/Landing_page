@@ -19,6 +19,12 @@ const Footer = () => {
     margin: 0 !important;
     @media (max-width: 768px) {
       padding: 0 1.4rem;
+      max-width: 768px;
+    }
+    @media (max-width: 1024px) {
+      padding: 0 2rem;
+      width: 1024px;
+      margin: 0;
     }
   `;
 
@@ -33,6 +39,11 @@ const Footer = () => {
     font-family: roboto, sans-serif;
     @media (max-width: 768px) {
       flex-direction: column;
+    }
+
+    @media (max-width: 1024px
+    min-width: 769px) {
+      flex-direction: row;
     }
   `;
 
@@ -119,8 +130,9 @@ const Footer = () => {
   const DivCopyR = styled.div`
     display: flex;
     align-items: center;
-
-    margin-top: 30px;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 20;
     justify-content: center;
 
     border-top: 0.5px solid #868e96;
@@ -225,8 +237,12 @@ const Footer = () => {
         </DivContain>
       </Divfooter>
       <DivCopyR>
-        <FaRegCopyright style={{ marginRight: "5px" }} />
-        <span>2024 Your Company. All rights reserved.</span>
+        <FaRegCopyright
+          style={{ marginLeft: "0", marginRight: "5px", color: "#868e96" }}
+        />
+        <span style={{ color: "#868e96" }}>
+          2024 Your Company. All rights reserved.
+        </span>
       </DivCopyR>
     </Sectionfooter>
   );
