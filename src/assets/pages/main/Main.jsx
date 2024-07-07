@@ -525,7 +525,7 @@ const Main = () => {
     top: 15px;
     @media (max-width: 449px) {
       left: 50px;
-      top: -17px;
+      top: -25px;
     }
     @media (min-width: 450px) &&(max-width: 768px) {
       left: 50px;
@@ -547,10 +547,10 @@ const Main = () => {
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
     @media (max-width: 450px) {
-      font-size: 12px;
+      font-size: 28px;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 451px) (max-width: 768px) {
       font-size: 40px;
     }
 
