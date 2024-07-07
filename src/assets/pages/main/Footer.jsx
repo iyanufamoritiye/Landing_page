@@ -14,11 +14,18 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const DivCon = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: black;
+  `;
   const Sectionfooter = styled.section`
     background-color: black;
     margin: 0 !important;
     @media (max-width: 768px) {
       padding: 0 1.4rem;
+
       max-width: 768px;
     }
     @media (max-width: 1024px) {
@@ -33,7 +40,7 @@ const Footer = () => {
     padding-left: 30px;
     padding-right: 30px;
     justify-content: space-around;
-    margin-bottom: 40px;
+
     padding: 10px 0;
     background-color: black;
     font-family: roboto, sans-serif;
@@ -131,8 +138,9 @@ const Footer = () => {
     display: flex;
     align-items: center;
     padding: 0;
-    margin-top: 10px;
-    margin-bottom: 20;
+
+    background-color: black;
+
     justify-content: center;
 
     border-top: 0.5px solid #868e96;
@@ -144,98 +152,102 @@ const Footer = () => {
   `;
 
   return (
-    <Sectionfooter>
-      <Divfooter>
-        <DivContain>
-          <Img src={FooterLogo} alt="Logo" />
-        </DivContain>
+    <DivCon>
+      <Sectionfooter>
+        <Divfooter>
+          <DivContain>
+            <Img src={FooterLogo} alt="Logo" />
+          </DivContain>
 
-        <DivContain>
-          <div>
-            <H1footer>Information</H1footer>
-          </div>
+          <DivContain>
+            <div>
+              <H1footer>Information</H1footer>
+            </div>
 
-          <nav>
+            <nav>
+              <Ul>
+                <li>
+                  <NavLink to="/">Main</NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/gallery">Gallery</NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/project">Project</NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/certification">Certification</NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/contact">Contacts</NavLink>
+                </li>
+              </Ul>
+            </nav>
+          </DivContain>
+
+          <DivContain>
+            <div>
+              <H1footer>Contacts</H1footer>
+            </div>
+
             <Ul>
-              <li>
-                <NavLink to="/">Main</NavLink>
-              </li>
-
-              <li>
-                <NavLink to="/gallery">Gallery</NavLink>
-              </li>
-
-              <li>
-                <NavLink to="/project">Project</NavLink>
-              </li>
-
-              <li>
-                <NavLink to="/certification">Certification</NavLink>
-              </li>
-
-              <li>
-                <NavLink to="/contact">Contacts</NavLink>
-              </li>
+              <ListContact>
+                <FaHome style={{ marginRight: "10px" }} />
+                <span>
+                  1234 Sample Street
+                  <br />
+                  Austin Texas 78704
+                </span>
+              </ListContact>
+              <ListContact>
+                <FaPhone style={{ marginRight: "10px" }} />
+                <span>512.333.2222</span>
+              </ListContact>
+              <ListContact>
+                <FaEnvelope style={{ marginRight: "10px" }} />
+                <span>sampleemail@gmail.com</span>
+              </ListContact>
             </Ul>
-          </nav>
-        </DivContain>
+          </DivContain>
 
-        <DivContain>
-          <div>
-            <H1footer>Contacts</H1footer>
-          </div>
+          <DivContain>
+            <div>
+              <H1footer>Social Media</H1footer>
+              <Ulsocial>
+                <ListSocials>
+                  <Alink href="http://www.facebook.com">
+                    <FaFacebook style={{ marginRight: "10px" }} />
+                  </Alink>
+                </ListSocials>
 
-          <Ul>
-            <ListContact>
-              <FaHome style={{ marginRight: "10px" }} />
-              <span>
-                1234 Sample Street
-                <br />
-                Austin Texas 78704
-              </span>
-            </ListContact>
-            <ListContact>
-              <FaPhone style={{ marginRight: "10px" }} />
-              <span>512.333.2222</span>
-            </ListContact>
-            <ListContact>
-              <FaEnvelope style={{ marginRight: "10px" }} />
-              <span>sampleemail@gmail.com</span>
-            </ListContact>
-          </Ul>
-        </DivContain>
+                <ListSocials>
+                  <Alink href="http://www.twitter.com">
+                    <FaTwitter style={{ marginRight: "10px" }} />
+                  </Alink>
+                </ListSocials>
 
-        <DivContain>
-          <div>
-            <H1footer>Social Media</H1footer>
-            <Ulsocial>
-              <ListSocials>
-                <Alink href="http://www.facebook.com">
-                  <FaFacebook style={{ marginRight: "10px" }} />
-                </Alink>
-              </ListSocials>
+                <ListSocials>
+                  <Alink href="http://www.linkedin.com">
+                    <FaLinkedin
+                      style={{ marginRight: "10px", color: "#fff" }}
+                    />
+                  </Alink>
+                </ListSocials>
 
-              <ListSocials>
-                <Alink href="http://www.twitter.com">
-                  <FaTwitter style={{ marginRight: "10px" }} />
-                </Alink>
-              </ListSocials>
-
-              <ListSocials>
-                <Alink href="http://www.linkedin.com">
-                  <FaLinkedin style={{ marginRight: "10px", color: "#fff" }} />
-                </Alink>
-              </ListSocials>
-
-              <ListSocials>
-                <Alink href="http://www.pinerest.com">
-                  <FaPinterest style={{ marginRight: "10px" }} />
-                </Alink>
-              </ListSocials>
-            </Ulsocial>
-          </div>
-        </DivContain>
-      </Divfooter>
+                <ListSocials>
+                  <Alink href="http://www.pinerest.com">
+                    <FaPinterest style={{ marginRight: "10px" }} />
+                  </Alink>
+                </ListSocials>
+              </Ulsocial>
+            </div>
+          </DivContain>
+        </Divfooter>
+      </Sectionfooter>
       <DivCopyR>
         <FaRegCopyright
           style={{ marginLeft: "0", marginRight: "5px", color: "#868e96" }}
@@ -244,7 +256,7 @@ const Footer = () => {
           2024 Your Company. All rights reserved.
         </span>
       </DivCopyR>
-    </Sectionfooter>
+    </DivCon>
   );
 };
 export default Footer;

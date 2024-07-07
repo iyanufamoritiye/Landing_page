@@ -223,17 +223,16 @@ const Main = () => {
       flex-direction: column;
       width: 100%;
       :nth-child(1) {
-        width: 100%;
-        height: 214px;
+        width: 311px;
+        height: 400;
       }
       :nth-child(2) {
-        width: 100%;
-        height: 214px;
+        width: 311px;
+        height: 400px;
       }
       :nth-child(3) {
-        width: 100%;
-        height: 100%;
-        margin-top: 0 !important;
+        width: 300px;
+        height: 400px;
       }
     }
 
@@ -250,7 +249,6 @@ const Main = () => {
       :nth-child(3) {
         width: 90%;
         height: 200px;
-        margin-top: 0 !important;
       }
     }
   `;
@@ -326,7 +324,7 @@ const Main = () => {
 
       gap: 10px;
     }
-    @media (max-width: 10268px) {
+    @media (max-width: 1026px) {
       gap: 60px;
     }
   `;
@@ -428,22 +426,30 @@ const Main = () => {
       background-color: #dee2e6;
       color: #212529;
     }
+    @media (max-width: 450px) {
+      font-size: 6px;
+      font-weight: 400;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-right: 12px;
+      padding-left: 6px;
+    }
 
     @media (max-width: 768px) {
-      font-size: 8px;
+      font-size: 6px;
       font-weight: 400;
       padding-top: 10px;
       padding-bottom: 10px;
       padding-right: 20px;
       padding-left: 10px;
     }
-    @media (max-width: 1026px) {
-      font-size: 8px;
+    @media (min-width: 770px) && (max-width: 1024px) {
+      font-size: 10px;
       font-weight: 400;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      padding-right: 24px;
-      padding-left: 12px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      padding-left: 15px;
     }
   `;
 
@@ -452,26 +458,24 @@ const Main = () => {
     justify-content: center;
     gap: 20px;
     overflow: hidden;
+ 
 
-    :nth-child(1) {
-      width: 50%;
-      object-fit: cover;
-      filter: grayscale(100%) brightness(50%);
-    }
-
-    :nth-child(2) {
-      width: 50%;
-    }
-    @media (max-width: 768px) {
+    @media   (max-width: 768px) {
       flex-direction: column;
       :nth-child(1) {
         width: 100%;
       }
 
       :nth-child(2) {
-        width: 100%;
+       100%
       }
     }
+ @media  (min-width: 768px)&&(max-width: 1024px) {
+  
+
+:nth-child(2) {
+        width: 100%;
+      }
   `;
 
   const DivProjectimg2 = styled.div`
@@ -507,18 +511,29 @@ const Main = () => {
         height: 167px;
       }
     }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      :nth-child(1) {
+        width: 100%;
+        height: 167px;
+      }
+    }
   `;
   const DivImgButton = styled.div`
     position: absolute;
     left: 60px;
     top: 15px;
-    @media (max-width: 768px) {
-      left: 55px;
-      top: -13px;
-    }
-    @media (max-width: 1026px) {
+    @media (max-width: 449px) {
       left: 50px;
-      top: -13px;
+      top: -17px;
+    }
+    @media (min-width: 450px) &&(max-width: 768px) {
+      left: 50px;
+      top: 50px;
+    }
+    @media (min-width: 769px) &&(max-width: 1026px) {
+      left: 50px;
+      top: 20px;
     }
   `;
   const H2reading2 = styled.h2`
@@ -526,15 +541,21 @@ const Main = () => {
     font-size: 48px;
     font-family: roboto, sans-serif;
     font-weight: 700;
-    color: #ffffff;
+    z-index: 1000;
+    color: white;
     margin-top: 100px;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
-    @media (max-width: 768px) {
-      font-size: 32px;
+    @media (max-width: 450px) {
+      font-size: 12px;
     }
-    @media (max-width: 1026px) {
-      font-size: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+
+    @media (min-width: 770px) && (max-width: 1026px) {
+      font-size: 40px;
     }
   `;
 
@@ -627,6 +648,17 @@ const Main = () => {
       width: 100%;
     }
   `;
+  const Divshadowimg = styled.div`
+    relative;
+
+     
+  `;
+  const Imgshade = styled.img`
+    width: 544px;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(50%);
+    height: 100%;
+  `;
 
   return (
     <div>
@@ -697,7 +729,17 @@ const Main = () => {
         <SectionPorject>
           <H2heading>Our Project</H2heading>
           <DivProjectimg>
-            <img src={projectimg1} alt="projectimg" />
+            <Divshadowimg>
+              <Imgshade src={projectimg1} alt="projectimg" />
+
+              <DivImgButton>
+                <H2reading2>
+                  Sample <br />
+                  Project
+                </H2reading2>
+                <ButtonP2>VIEW MORE →</ButtonP2>
+              </DivImgButton>
+            </Divshadowimg>
 
             <img src={projectimg2} alt="projectimg" />
           </DivProjectimg>
@@ -707,13 +749,6 @@ const Main = () => {
             <img src={projectimg5} alt="projectimg" />
           </DivProjectimg2>
           <ButtonP>ALL PROJECTS →</ButtonP>
-          <DivImgButton>
-            <H2reading2>
-              Sample <br />
-              Project
-            </H2reading2>
-            <ButtonP2>VIEW MORE →</ButtonP2>
-          </DivImgButton>
         </SectionPorject>
 
         <section>
