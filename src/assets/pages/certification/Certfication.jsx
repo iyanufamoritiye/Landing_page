@@ -13,6 +13,9 @@ const Certfication = () => {
     @media (max-width: 768px) {
       padding: 0 0.5rem;
     }
+    @media (max-width: 1024px) {
+      padding: 0 2rem;
+    }
   `;
 
   const H2C = styled.h2`

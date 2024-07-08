@@ -8,8 +8,11 @@ const Project = () => {
     padding: 0 4.2rem;
     margin: 0 auto;
     font-family: "roboto", sans-serif;
-    @media (max-width: 768px) {
+     @media (max-width: 768px) {
       padding: 0 0.5rem;
+    }
+    @media (max-width: 1024px) {
+      padding: 0 2rem;
     }
   `;
   const Span = styled.span`
