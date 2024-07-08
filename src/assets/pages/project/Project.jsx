@@ -24,12 +24,14 @@ const Project = () => {
     margin-bottom: 400px;
   `;
   return (
-    <Container>
-      <Mainheader />
+    <div>
+      <Container>
+        <Mainheader />
 
-      <Span>no page found</Span>
+        <Span>no page found</Span>
+      </Container>
       <Footer />
-    </Container>
+    </div>
   );
 };
 export default Project;

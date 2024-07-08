@@ -98,35 +98,37 @@ const Gallery = () => {
   `;
 
   return (
-    <Container>
-      <Mainheader />
-      <section>
-        <div>
-          <H2p>Photo</H2p>
-          <H2g>Gallery</H2g>
-          <DivImg>
-            <img src={Gallery1} alt="gallery img" />
-            <img src={Gallery2} alt="gallery img" />
-            <img src={Gallery3} alt="gallery img" />
-            <img src={Gallery4} alt="gallery img" />
-            <img src={Gallery5} alt="gallery img" />
-            <img src={Gallery6} alt="gallery img" />
-            <img src={Gallery7} alt="gallery img" />
-            <img src={Gallery8} alt="gallery img" />
-            <img src={Gallery9} alt="gallery img" />
-            <img src={Gallery10} alt="gallery img" />
-          </DivImg>
-          <DivImgBtn>
-            <img src={sidenum} alt="" />
-            <Divarrow>
-              <Buttonarrow>←</Buttonarrow>
-              <Buttonarrow>→</Buttonarrow>
-            </Divarrow>
-          </DivImgBtn>
-        </div>
-      </section>
+    <div>
+      <Container>
+        <Mainheader />
+        <section>
+          <div>
+            <H2p>Photo</H2p>
+            <H2g>Gallery</H2g>
+            <DivImg>
+              <img src={Gallery1} alt="gallery img" />
+              <img src={Gallery2} alt="gallery img" />
+              <img src={Gallery3} alt="gallery img" />
+              <img src={Gallery4} alt="gallery img" />
+              <img src={Gallery5} alt="gallery img" />
+              <img src={Gallery6} alt="gallery img" />
+              <img src={Gallery7} alt="gallery img" />
+              <img src={Gallery8} alt="gallery img" />
+              <img src={Gallery9} alt="gallery img" />
+              <img src={Gallery10} alt="gallery img" />
+            </DivImg>
+            <DivImgBtn>
+              <img src={sidenum} alt="" />
+              <Divarrow>
+                <Buttonarrow>←</Buttonarrow>
+                <Buttonarrow>→</Buttonarrow>
+              </Divarrow>
+            </DivImgBtn>
+          </div>
+        </section>
+      </Container>
       <Footer />
-    </Container>
+    </div>
   );
 };
 export default Gallery;

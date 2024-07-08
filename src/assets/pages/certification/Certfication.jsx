@@ -38,12 +38,14 @@ const Certfication = () => {
   `;
 
   return (
-    <Container>
-      <Mainheader />
-      <H2C>Company</H2C>
-      <H2C2>Certificaions</H2C2>
+    <div>
+      <Container>
+        <Mainheader />
+        <H2C>Company</H2C>
+        <H2C2>Certificaions</H2C2>
+      </Container>
       <Footer />
-    </Container>
+    </div>
   );
 };
 export default Certfication;
